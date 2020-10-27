@@ -28,6 +28,9 @@ const urlRouter = require("./Routes/urlRoutes");
 // auth router
 app.use("/auth", authRouter);
 app.use("/", urlRouter);
+app.get("/test", (req, res) => {
+  res.send("hello");
+});
 
 // port
 app.listen(constants.port, () => console.log("server running !"));
